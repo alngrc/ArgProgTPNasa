@@ -27,7 +27,7 @@ body {
 }
 #tierra:hover {
         animation-play-state: paused;
-        
+
 
 
 }
@@ -88,6 +88,7 @@ Rotacion de la tierra
     background: linear-gradient(180deg, rgba(255,81,0,1) 0%, rgba(255,119,0,1) 100%);
     -webkit-text-fill-color: transparent;
     transition: all ease-in-out 0.5s;
+    background-clip: text;
     -webkit-background-clip: text;
 }
 
