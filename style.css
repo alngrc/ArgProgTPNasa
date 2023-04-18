@@ -94,13 +94,6 @@ nav {
 }
 
 /* centrar home */
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-}
 
 
 
@@ -182,12 +175,13 @@ HOME APOD
     height: 100%;
     margin: 0;
     padding: 0;
-
 }
-.cont-apod {
+.main {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     width: 100%;
-    height: 100%;
 }
 .apod {
     display: flex;
@@ -201,7 +195,16 @@ HOME APOD
     color: aliceblue;
     font-size: 1em;
 }
-
+.img-apod {
+    display: flex;
+    flex-direction: column;   
+    width: 100%; 
+}
+.cont-apod {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
 .cont-img {
     display: flex;
     border: #262626 5px solid;
@@ -214,17 +217,8 @@ HOME APOD
     height: 100%;
     margin: 0;
     background-size: fill;
-
+    padding: 0.5rem;
 }
-
-.text-apod {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 10%;
-}
-
 .titulo {
     display: flex;
     justify-content: center;
@@ -242,11 +236,12 @@ HOME APOD
     width: 100%;
     
 }
-
-.img-apod {
+.text-apod {
     display: flex;
-    flex-direction: column;   
-    width: 100%; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
 }
 .info-apod {
     position: relative;
@@ -264,7 +259,6 @@ HOME APOD
     position: relative;
     top: 10%;
 }
-
 @media (max-width:1200px) {
     .text-apod {
         flex-direction: column;
