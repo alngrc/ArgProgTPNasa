@@ -64,17 +64,20 @@ nav {
     align-items: center;
     position: absolute;
     width: 100%;
+    background-color: rgba(30, 30, 30, 0.357);
+
 }
 
 .logo img {
-    width: 70px;
-    margin-left: 3rem;
+    width: 100px;
+    margin-left: 4rem;
 }
 
 .nav-buttons ul {
     display: flex;
     justify-content: space-between;
     margin-right: 3rem;
+    padding: 2rem;
 }
 
 .nav-buttons ul li a {
@@ -82,7 +85,7 @@ nav {
     list-style-type: none;
     text-decoration: none;
     color: aliceblue;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     padding: 0 40px;
     font-weight: 500;
     transition: all ease-in-out 0.5s;
