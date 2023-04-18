@@ -17,7 +17,10 @@
 </head>
 
 <body>
-    <div id="spinner-container"></div>
+    
+    <div id="loader">
+        <div class="loader-text"></div>
+    </div>
 
     <nav>
         <div class="nav-bar">
@@ -34,49 +37,46 @@
         </div>
     </nav>
     
-    <section class="container">
-        <h1>NASA</h1>
+    <section class="containers">
         <div class="main">
-            
-            <!-- <div class="meteoro">
-                <img class="img-fluid" src="img/meteorite.png" id="meteoro" alt="" srcset="">
-                <h2>WEBOS</h2>
-            </div>
-            <div class="tierra">
-                <img class="img-fluid" id="tierra" src="img/tierra.png" alt="" srcset="">
-            </div>
-            <div class="datos-tierra">
-                <h1>MASA</h1>
-                <h2>5,9736*10&#178;&#8308; kg&#185;</h2>
-                <h1>VOLUMEN</h1>
-                <h2>1,08321*10&#185;&#178; km³&#185</h2>
-                <h1>DEL SOL A LA TIERRA</h1>
-                <h2>150,000,000 km</h2>
-            </div> -->
             <div class="apod">
                 <div class="img-apod">
-                    <div id="c_multimedia" class="embed-responsive embed-responsive-21by9">
-                        
-                    </div>
-                    <div class="text-apod">
-                        <h2 id="titulo-apod">titulo: </h2>
-                    <h2 id="fecha-apod">fecha: </h2>
-                    <h2 id="copy-apod">copyright: </h2>
+                    <div class="cont-apod">
+                        <div class="cont-img">
+                            <div id="c_multimedia">
+                            </div>
+                        </div>
+                        <div class="titulo">
+                            <h1>ASTRONOMY</h1>
+                            <h1>PICTURE</h1>
+                            <h1>OF THE</h1>
+                            <h1>DAY</h1>
+                        </div>
                     </div>
                     
+                    <div class="text-apod">
+                        <div class="info-apod">
+                            <h2 id="titulo-apod">titulo: </h2>
+                        </div>
+                        <div class="info-apod">
+                            <h2 id="fecha-apod">fecha: </h2>
+                        </div>
+                        <div class="info-apod">
+                            <h2 id="copy-apod">copyright: </h2>
+                        </div>
+                    
+                    </div>
                 </div>
-            </div>
-            <div class="titulo">
-                <h1 class="h1-responsive">Astronomy <br> Picture <br> Of the <br> Day</h1>
+                
             </div>
         </div>
     </section>
     <section class="nosotros">
-        <div id="abt-text" class="container oculto" style="width: 100%; margin: 0 auto">
+        <div id="abt-text" class="container oculto">
         <div id="abt-text" class="container text-center oculto">
           <div class="col-10">
             <h1 class="anim1 oculto text-center">Nuestro Equipo</h1>
-            <h2 class="anim1 oculto" style="width: 100%; margin-bottom: 3em;">
+            <h2 class="anim1 oculto">
                 Pagina que utiliza la api de la NASA para mostrar fotos diarias
             </h2>
           </div>
