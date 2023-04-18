@@ -36,3 +36,12 @@ function mostrarDatos({date, title, media_type, url, copyright}) {
 //         path_img
 //     })
 // }) 
+
+
+// funcion enviar mail
+function sendMail() {
+    var link = 'mailto:alan.garciag10@outlook.com?subject=Message from '
+             +document.getElementById('mail').value + ' | Doubt: '+document.getElementById('dudas').value
+             +'&body='+document.getElementById('message').value;
+    window.location.href = link;
+}

@@ -151,12 +151,13 @@ Rotacion de la tierra
 /* Barra de desplazamiento */
 ::-webkit-scrollbar {
     width: 10px;
+    background-color: black;
     /* Ancho de la barra de desplazamiento */
 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(0, 113, 241);
+    background-color: orangered;
 
 }
 
@@ -172,7 +173,7 @@ Rotacion de la tierra
 
 /* Pulgar de la barra de desplazamiento */
 ::-webkit-scrollbar-thumb {
-    background-color: #0004ff;
+    background-color: #ffffff;
     /* Color del pulgar de la barra de desplazamiento */
     /* box-shadow: inset 0px 0px 20px rgb(109, 33, 233); */
 
@@ -237,31 +238,52 @@ HOME APOD
     color: white;
     border-radius: 20px;
     padding: 50px;
-    
+    justify-content: center;
+    align-content: center;
+
 }
 
-#contac{
-    inline-size: min-content;
-}
+
+
 
 #titulo-contacto {
     /* background-color: rgba(255, 255, 255, 0.301); */
     padding: 12px;
     box-shadow: inset 0px 0px 20px #ffffff;
     border-radius: 60px;
-    inline-size: 900px;
+    margin: 0 auto;
     text-align: center;
+    inline-size: 900px;
     justify-content: center;
     align-content: center;
 
-
 }
 
+.bloque-input{
+    margin: 55px;
+}
+
+
+
 #titulito {
-    padding: 40px;
+    margin: 15px;
+    padding: 10px;
     color: whitesmoke;
     text-align: left;
     justify-content: left;
+    border: solid 1px black;
+    border-radius: 0px 60px 60px 0px;
+    box-shadow: inset 0px 0px 20px #ffffff;
+
+}
+
+h3{
+    padding-left: 10px;
+}
+
+#detalles {
+    margin-right: 5px ;
+    padding-right: 5px ;
 }
 
 .inpu {
@@ -269,12 +291,77 @@ HOME APOD
     border-radius: 50px;
     background-color: rgba(245, 245, 245, 0.363);
     padding: 10px;
+}
 
+#message {
+    border-radius: 10px;
 }
 
 
-#message{
-    border-radius: 20px;
+/* sobre nosotros */
+#about {
+    width: 100%;
+    height: 100vh;
+    background-image: url('img/bg-about1.jpg');
+    margin-top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+#abt-text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    margin-top: 6em;
+}
 
+#abt-text h1 {
+    font-size: 32px;
+    padding: 20px;
+}
+
+#abt-text h2 {
+    font-size: 17px;
+    width: 45%;
+}
+
+/*#abt-ints {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}*/
+
+/*#abt-ints img {
+    width: 18em;
+}*/
+
+.abt-int {
+    max-height: 200px;
+}
+
+.abt-int img {
+    transition-delay: 0ms;
+    transition: all 1s;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.abt-int img:hover {
+    transform: scale(1.1);
+}
+
+.abt-int:nth-child(2) {
+    transition-delay: 300ms;
+}
+
+.abt-int:nth-child(3) {
+    transition-delay: 600ms;
+}
+
+.abt-int:nth-child(4) {
+    transition-delay: 900ms;
+}
