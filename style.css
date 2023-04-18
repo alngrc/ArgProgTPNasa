@@ -191,7 +191,7 @@ HOME APOD
 }
 .apod {
     display: flex;
-    background-color: rgba(64, 64, 64, 0.327);
+    background-color: rgba(30, 30, 30, 0.257);
     backdrop-filter: blur(2px);
     width: 90%;
     height: 70vh;
@@ -221,7 +221,8 @@ HOME APOD
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;    
+    width: 100%;
+    height: 10%;
 }
 
 .titulo {
@@ -248,14 +249,20 @@ HOME APOD
     width: 100%; 
 }
 .info-apod {
-    align-items: center;
+    position: relative;
     text-align: center;
     justify-content: center;
-    font-family: "Rubik";
     border: #262626 5px solid;
     margin-top: 0.5rem;
     width: 100%;
     height: 100%;
+}
+.info-apod h2 {
+    font-size: 2em;
+    font-family: "Rubik";
+    align-items: center;
+    position: relative;
+    top: 10%;
 }
 
 @media (max-width:1200px) {
