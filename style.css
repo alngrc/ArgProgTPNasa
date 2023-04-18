@@ -13,7 +13,7 @@ body {
     background-image: url(img/estrellas.png);
     background-size: 248px;
     background-attachment: fixed;
-    max-width: 95%;
+    max-width: 100%;
     outline: 2px solid rgb(225, 255, 0);
     display: flex;
     flex-flow: column nowrap;
@@ -54,21 +54,27 @@ body {
 
 
 /* nav bar*/
+nav {
+    width: 100vw;
+}
 .nav-bar {
     display: flex;
+    padding: 1rem;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    /* width: 100%; */
+    width: 100%;
 }
 
 .logo img {
     width: 70px;
+    margin-left: 3rem;
 }
 
 .nav-buttons ul {
     display: flex;
     justify-content: space-between;
+    margin-right: 3rem;
 }
 
 .nav-buttons ul li a {
@@ -76,8 +82,8 @@ body {
     list-style-type: none;
     text-decoration: none;
     color: aliceblue;
-    font-size: 1.3em;
-    padding: 30px;
+    font-size: 1.8rem;
+    padding: 0 40px;
     font-weight: 500;
     transition: all ease-in-out 0.5s;
 
@@ -172,6 +178,7 @@ body {
 HOME APOD
 */
 .containers {
+    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -180,18 +187,19 @@ HOME APOD
 .cont-apod {
     display: flex;
     width: 100%;
+    height: 100%;
 }
 .apod {
     display: flex;
     background-color: rgba(64, 64, 64, 0.327);
     backdrop-filter: blur(2px);
-    width: 100%;
+    width: 90%;
     height: 70vh;
 }
 .apod h2 {
     padding: 10px;
     color: aliceblue;
-    font-size: 1em
+    font-size: 1em;
 }
 
 .cont-img {
@@ -199,6 +207,7 @@ HOME APOD
     border: #262626 5px solid;
     padding: 0;
     margin: 0 0.5rem 0 0;
+    width: 60%;
 }
 #c_multimedia img{
     width: 100%;
@@ -223,7 +232,8 @@ HOME APOD
     border: #262626 5px solid;
     margin: 0;
     text-align: center;
-    width: 100%;
+    width: 40%;
+    letter-spacing: 2em;
 }
 .titulo h1 {
     margin: 0;
