@@ -28,14 +28,33 @@
 
 // }
 
-window.addEventListener('load', obtenerDatos);
-function obtenerDatos() {
-    const fecha = fechaInput.value;
-    const titulo = document.querySelector('#titulo-apod');
-    const copy = document.querySelector('#copy-apod')
-    const urlnew = `https://api.nasa.gov/planetary/apod?api_key=vZQVBQWVQr1EmRgO2Avwlnjrau0SaX9szdgjnI8T&date=${fechaActual}`;
-}
 
+
+// window.addEventListener('load', obtenerDatos);
+// function obtenerDatos() {
+//     // const fecha = fechaInput.value;
+//     // const titulo = document.querySelector('#titulo-apod');
+//     // const copy = document.querySelector('#copy-apod')
+//     // const urlnew = `https://api.nasa.gov/planetary/apod?api_key=vZQVBQWVQr1EmRgO2Avwlnjrau0SaX9szdgjnI8T&date=${fechaActual}`;
+// }
+window.addEventListener('load', obtenerImagenDelDia);
+
+function obtenerImagenDelDia() {
+  const url = 'https://api.nasa.gov/planetary/apod?api_key=vZQVBQWVQr1EmRgO2Avwlnjrau0SaX9szdgjnI8T';
+  const titulo = document.querySelector('#titulo-apod');
+  const copy = document.querySelector('#copy-apod');
+  const imagen = document.getElementById('imagen');
+  const loader = document.getElementById('loader');
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      imagen.src = data.url;
+      titulo.innerHTML = data.title;
+      copy.innerHTML = data.copyrigth;
+    })
+    .catch(error => console.log(error));
+}
 const fechaInput = document.getElementById('fecha');
 const imagen = document.getElementById('imagen');
 const loader = document.getElementById('loader');
@@ -61,6 +80,9 @@ fechaInput.addEventListener('change', () => {
 
     
 });
+
+
+
   // Simula una carga de 3 segundos para el ejemplo
   setTimeout(function() {
     // Oculta el spinner después de 3 segundos
