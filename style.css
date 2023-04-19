@@ -70,6 +70,7 @@ body {
     z-index: 5;
     border: solid 1px white;
     -webkit-appearance: none;
+    appearance: none;
     /* Sin apariencia predeterminada */
     width: 10%;
     /* Ancho completo */
