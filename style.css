@@ -15,7 +15,7 @@ body {
     background-image: url(img/estrellas.png);
     background-size: 248px;
     background-attachment: fixed;
-    max-width: 100%;
+    /* max-width: 100%; */
     outline: 2px solid rgb(225, 255, 0);
     display: flex;
     flex-flow: column nowrap;
@@ -209,7 +209,7 @@ HOME APOD
 
 .apod {
     display: flex;
-    background-color: rgba(30, 30, 30, 0.457);
+    /* background-color: rgba(30, 30, 30, 0.457); */
     padding: 30px;
     width: 90%;
     height: 70vh;
@@ -231,23 +231,55 @@ HOME APOD
     display: flex;
     width: 100%;
     height: 100%;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
 }
+
+
 
 .cont-img {
     display: flex;
-    border: #262626 5px solid;
     padding: 0;
     margin: 0 0.5rem 0 0;
-    width: 60%;
+    justify-content: center;
+    align-content: center;
 }
 
 #c_multimedia img {
+
+    border: #262626 5px solid;
     width: 100%;
-    height: 100%;
+    height: 500px;
     margin: 0;
     background-size: fill;
     padding: 0.5rem;
 }
+
+#fecha{
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(30, 30, 30, 0.457);
+    color: aqua;
+    border: #262626 5px solid;
+    border-radius: 6px;
+    text-align: center;
+
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    background-color: rgba(30, 30, 30, 0.457);
+    border-left: #ffffff 1px solid;
+    /* border-radius: 4px; */
+    padding: 6px;
+  }
+
+  input[type="date"]:hover::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    background-color: rgba(230, 0, 0, 0.457);
+    border-left: #ee0000 1px solid;
+  }
+
 
 .titulo {
     display: flex;
@@ -257,8 +289,8 @@ HOME APOD
     border: #262626 5px solid;
     margin: 0;
     text-align: center;
-    width: 40%;
     letter-spacing: 2em;
+    width: 40%;
 }
 
 .titulo h1 {
@@ -325,6 +357,11 @@ HOME APOD
         flex-direction: column;
         width: 100%;
         height: 100%;
+    }
+}
+@media (max-width:670px) {
+    .nav-bar {
+        display: none;
     }
 }
 
