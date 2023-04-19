@@ -13,94 +13,97 @@
 </head>
 
 <body>
+    <onload="mostrarTexto()">
+        <div id="loader">
+            <div id="spinner"></div>
 
-    <div id="loader"></div>
-
-    <nav>
-        <div class="nav-bar">
-            <div class="logo">
-                <img src="img/logo-tierra.png" alt="" srcset="">
-            </div>
-            <div class="nav-buttons">
-                <ul>
-                    <li><a href="#tablierrier">HOME</a></li>
-                    <li><a href="#nosotr">NOSOTROS</a></li>
-                    <li><a href="#contac">CONTACTO</a></li>
-                </ul>
-            </div>
         </div>
-    </nav>
 
-    <section id="tablierrier" class="containers">
-        <div class="main">
-            <div class="apod">
-                <div class="img-apod">
-                    <div class="cont-apod">
-                        <div class="cont-img">
-                            <div id="c_multimedia">
-                                <img id="imagen" src="" alt="">
+        <nav>
+            <div class="nav-bar">
+                <div class="logo">
+                    <img src="img/logo-tierra.png" alt="" srcset="">
+                </div>
+                <div class="nav-buttons">
+                    <ul>
+                        <li><a href="#tablierrier">HOME</a></li>
+                        <li><a href="#nosotr">NOSOTROS</a></li>
+                        <li><a href="#contac">CONTACTO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="tablierrier" class="containers">
+            <div class="main">
+                <div class="apod">
+                    <div class="img-apod">
+                        <div class="cont-apod">
+                            <div class="cont-img">
+                                <div id="c_multimedia">
+                                    <img id="imagen" src="" alt="">
+                                </div>
+                            </div>
+                            <div class="titulo">
+                                <h1>ASTRONOMY</h1>
+                                <h1>PICTURE</h1>
+                                <h1>OF THE</h1>
+                                <h1>DAY</h1>
                             </div>
                         </div>
-                        <div class="titulo">
-                            <h1>ASTRONOMY</h1>
-                            <h1>PICTURE</h1>
-                            <h1>OF THE</h1>
-                            <h1>DAY</h1>
+
+                        <div class="text-apod">
+                            <div class="info-apod">
+                                <h2 id="titulo-apod">titulo: </h2>
+                            </div>
+                            <div class="info-apod">
+                                <input type="date" name="" id="fecha" min="1995-06-16">
+                            </div>
+                            <div class="info-apod">
+                                <h2 id="copy-apod">copyright: </h2>
+                            </div>
+
                         </div>
                     </div>
 
-                    <div class="text-apod">
-                        <div class="info-apod">
-                            <h2 id="titulo-apod">titulo: </h2>
-                        </div>
-                        <div class="info-apod">
-                            <input type="date" name=""  id="fecha" min="1995-06-16">
-                        </div>
-                        <div class="info-apod">
-                            <h2 id="copy-apod">copyright: </h2>
-                        </div>
-
+                </div>
+            </div>
+        </section>
+        <section id="nosotr" class="nosotros">
+            <div id="abt-text" class="container oculto">
+                <div id="abt-text" class="container text-center oculto">
+                    <div id="fond" class="col-10">
+                        <h2 id="fondo" class="anim1 oculto">
+                            Pagina que utiliza la api de la NASA para mostrar fotos diarias
+                        </h2>
                     </div>
                 </div>
-
-            </div>
-        </div>
-    </section>
-    <section id="nosotr" class="nosotros">
-        <div id="abt-text" class="container oculto">
-            <div id="abt-text" class="container text-center oculto">
-                <div id="fond" class="col-10">
-                    <h2 id="fondo" class="anim1 oculto">
-                        Pagina que utiliza la api de la NASA para mostrar fotos diarias
-                    </h2>
-                </div>
-            </div>
                 <div id="fon" class="row w-100 my-auto">
-                    <h1 class="anim1 oculto text-center">Nuestro Equipo</h1>
-
-                    <div class="ani col-lg-3 col-md-6 abt-int my-1 img-nos">
-                        <img src="img/icon/mateo_1.png" class="mx-auto align-self-center d-block my-1" />
+                    <h1 class="anim1 oculto text-center" id="nos-equipo"><span>Nuestro Equipo</span></h1>
+                    <h1 class="nos-texto"><span>- Alan Garcia <br> - Mate Pozoo <br> - Martin Romero <br> - Mateo Gonzales</span></h1>
+                    <div class="ani col-lg-3 col-md-6 abt-int my-1 img-fluid">
+                        <img src="img/icon/mateo_1.png" class="img-nos" />
                         <div class="texto-superpuesto">
                             <p>Mateo <br>Gonzales</p>
-                          </div>
+                        </div>
                     </div>
-                    <div class="ani col-lg-3 col-md-6 abt-int">
-                        <img src="img/icon/mate-p.jpg" class="mx-auto align-self-center d-block my-1" />
+                    <div class="ani col-lg-3 col-md-6 abt-int img-fluid">
+                        <img src="img/icon/mate-p.jpg" class="img-nos"/>
                         <div class="texto-superpuesto">
                             <p>Mateo <br>Pozo</p>
-                          </div>
+                        </div>
                     </div>
-                    <div class="ani col-lg-3 col-md-6 abt-int">
+                    <div class="ani col-lg-3 col-md-6 abt-int img-fluid">
                         <a href="https://www.youtube.com/watch?v=xeo8J4NlqzQ">
-                        <img src="img/icon/tincho.png" class="mx-auto align-self-center d-block my-1" />
-                        <div class="texto-superpuesto">
-                            <p>Martin <br>Romero</p>
-                          </div>
+                            <img src="img/icon/tincho.png" class="img-nos"/>
+                            <div class="texto-superpuesto">
+                                <p>Martin <br>Romero</p>
+                            </div>
                         </a>
                     </div>
-                    <div class="ani col-lg-3 col-md-6 abt-int">
+                    <div class="ani col-lg-3 col-md-6 abt-int img-fluid">
                         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                            <img src="img/icon/alngr.jpg" class="mx-auto align-self-center d-block" />
+                            <img src="img/icon/alngr.jpg" class="img-nos" />
                             <div class="texto-superpuesto">
                                 <p>Alan <br>Garcia</p>
                             </div>
@@ -108,64 +111,64 @@
                     </div>
                 </div>
             </div>
-    </section>
-    <section id="contac" class="container contacto">
-        <div class="contact">
-            <div class="row" id="titulo-contacto">
-                <h2 id="contac">CONTACT US</h2>
-            </div>
-            <div class="mb-3 bloque-input">
-                <div class="row mb-1">
-                    <div  id="titulito">
-                        <h3 id="mail">EMAIL</h3>
+        </section>
+        <section id="contac" class="container contacto">
+            <div class="contact">
+                <div class="row" id="titulo-contacto">
+                    <h2 id="contac">CONTACT US</h2>
+                </div>
+                <div class="mb-3 bloque-input">
+                    <div class="row mb-1">
+                        <div id="titulito">
+                            <h3 id="mail">EMAIL</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-11">
+                            <input class="inpu" id="mail" type="text" placeholder="ejemplo@email.com">
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-11">
-                        <input class="inpu" id="mail" type="text" placeholder="ejemplo@email.com">
+
+                <div class="mb-3 bloque-input">
+                    <div class="row mb-1">
+                        <div id="titulito">
+                            <h3>DOUBTS?</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <input class="inpu" id="dudas" type="text" placeholder="comentá tus dudas aquí">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 bloque-input">
+                    <div class="row mb-1">
+                        <div id="titulito">
+                            <h3 id="detalles">LEAVE YOUR MESSAGE OR ANY DETAILS HERE</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <textarea class="inpu" id="message" name="Text1" cols="40" rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 bloque-input">
+                    <div class="row">
+                        <div>
+                            <button class="boton" onclick="sendMail()">Send message</button>
+                        </div>
+                        <div></div>
                     </div>
                 </div>
             </div>
 
-            <div class="mb-3 bloque-input">
-                <div class="row mb-1">
-                    <div id="titulito">
-                        <h3>DOUBTS?</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div>
-                        <input class="inpu" id="dudas" type="text" placeholder="comentá tus dudas aquí">
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb-3 bloque-input">
-                <div class="row mb-1">
-                    <div id="titulito">
-                        <h3 id="detalles">LEAVE YOUR MESSAGE OR ANY DETAILS HERE</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div>
-                        <textarea class="inpu" id="message" name="Text1" cols="40" rows="5"></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb-3 bloque-input">
-                <div class="row">
-                    <div>
-                        <button class="boton" onclick="sendMail()">Send message</button>
-                    </div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <script type="text/javascript" src="main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        </section>
+        <script type="text/javascript" src="main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </body>
 
 </html>

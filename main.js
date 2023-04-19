@@ -37,6 +37,25 @@
 //     // const copy = document.querySelector('#copy-apod')
 //     // const urlnew = `https://api.nasa.gov/planetary/apod?api_key=vZQVBQWVQr1EmRgO2Avwlnjrau0SaX9szdgjnI8T&date=${fechaActual}`;
 // }
+
+window.addEventListener('load', function() {
+  var loadingScreen = document.getElementById('loader');
+  var mainContent = document.getElementById('spinner');
+  var body = document.querySelector('body');
+  
+  setTimeout(function() {
+    loadingScreen.style.display = 'none';
+    mainContent.style.display = 'block';
+    body.style.overflow = 'auto'; // Vuelvo a activar el scroll
+    body.style.overflowX = 'hidden';
+    
+    let readyElement = document.getElementById('loading-text');
+    typeWriter(readyElement, readyElement.textContent);
+  }, 900);
+});
+
+
+
 window.addEventListener('load', obtenerImagenDelDia);
 
 function obtenerImagenDelDia() {

@@ -25,7 +25,8 @@ body {
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
-    
+    overflow: hidden;
+
 }
 
 
@@ -128,7 +129,7 @@ nav {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    
+
 }
 
 #loader::before {
@@ -142,18 +143,19 @@ nav {
     border-top-color: #007bff;
     animation: spin 0.5s linear infinite;
     overflow: hidden;
-
 }
+
 
 
 @keyframes spin {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
 
 /* Barra de desplazamiento */
 ::-webkit-scrollbar {
@@ -266,7 +268,7 @@ HOME APOD
     padding: 0.5rem;
 }
 
-#fecha{
+#fecha {
     justify-content: center;
     align-content: center;
     background-color: rgba(30, 30, 30, 0.457);
@@ -274,21 +276,22 @@ HOME APOD
     border: #262626 5px solid;
     border-radius: 0px 0px 6px 6px;
     text-align: center;
-border-top: rgba(0, 0, 0, 0);
+    border-top: rgba(0, 0, 0, 0);
 }
+
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
     background-color: rgba(30, 30, 30, 0.457);
     border-left: #ffffff 1px solid;
     /* border-radius: 4px; */
     padding: 6px;
-  }
+}
 
-  input[type="date"]:hover::-webkit-calendar-picker-indicator {
+input[type="date"]:hover::-webkit-calendar-picker-indicator {
     filter: invert(1);
     background-color: rgba(230, 0, 0, 0.457);
     border-left: #ee0000 1px solid;
-  }
+}
 
 
 .titulo {
@@ -368,6 +371,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         height: 100%;
     }
 }
+
 @media (max-width:670px) {
     .nav-bar {
         display: none;
@@ -382,30 +386,31 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 100vh;
     width: 100%;
 
-    
+
 }
 
-#nosotr{
+#nosotr {
     display: flex;
     justify-content: flex-start;
 }
 
-#fon{
+#fon {
     background-color: rgba(30, 30, 30, 0.457);
     border: #262626 5px solid;
-    box-shadow:  1px 1px 10px white;
+    box-shadow: 1px 1px 10px white;
     height: 50%;
     width: 300px;
     align-content: center;
     justify-content: center;
 }
+
 #fon h1 {
     display: flex;
     justify-content: center;
-    
+
 }
 
-#fond{
+#fond {
     background-color: rgba(30, 30, 30, 0.457);
     border: #262626 5px solid;
     border-radius: 90px 90px 90px 90px;
@@ -416,8 +421,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 
-#fondo{
-    
+#fondo {
+
     background-color: rgba(30, 30, 30, 0.457);
     padding: 20px;
     box-shadow: inset 1px 1px 10px white;
@@ -464,9 +469,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /*#abt-ints img {
     width: 18em;
 }*/
+.nos-texto span {
+    display: none;
+}
 
 .abt-int {
-    max-height: 200px;
     position: relative;
 }
 
@@ -478,7 +485,45 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 50%;
     width: 250px;
     height: 250px;
-    
+
+}
+
+@media (max-width:1200px) {
+    .abt-int img {
+        width: 200px;
+        height: 150px;
+        padding: 0;
+        margin: 0;
+        align-content: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width:800px) {
+    .abt-int {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+    }
+
+    #fon {
+        height: 80;
+    }
+}
+
+@media (max-width:790px) {
+    .abt-int {
+        display: none;
+    }
+    .nos-texto span {
+        display: block;
+    }
+    #nos-equipo span {
+        display:none;
+    }
 }
 
 .abt-int img:hover {
@@ -497,9 +542,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transition-delay: 900ms;
 }
 
-.abt-int:hover .texto-superpuesto  {
+.abt-int:hover .texto-superpuesto {
     display: block;
-  }
+}
 
 .texto-superpuesto {
     position: absolute;
@@ -509,7 +554,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     left: 35px;
     width: 250px;
     height: 250px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid black;
     border-radius: 50%;
     color: white;
@@ -519,22 +564,29 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     text-align: center;
     transition: all ease-in-out .5s;
     animation: fade 1s 1;
-  }
-  @keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  /* .texto-superpuesto {
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* .texto-superpuesto {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 } */
-  .texto-superpuesto p {
+.texto-superpuesto p {
     font-size: 1.5rem;
     text-align: center;
-  }
+}
 
 /*
 Escala Imagenes
@@ -551,6 +603,7 @@ Escala Imagenes
     padding: 50px;
 
 }
+
 .contact {
     height: 90%;
     background-color: rgba(30, 30, 30, 0.457);
@@ -560,7 +613,7 @@ Escala Imagenes
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
     flex-direction: column;
     padding: 30px;
 }
@@ -568,10 +621,12 @@ Escala Imagenes
 
 
 #titulo-contacto {
-    background-color: rgba(0, 0, 0, 0.457);
-    border: #262626 1px solid;
+    background-color: rgba(39, 39, 39, 0.336);
+    border: #262626 5px solid;
+    border-top: #00000000;
     padding: 12px;
-    box-shadow: inset 0px 0px 10px #aaaaaa;
+    
+    box-shadow: 1px 1px 10px #aaaaaa;
     /* border-radius: 60px; */
     margin: 0 auto;
     text-align: center;
@@ -587,8 +642,7 @@ Escala Imagenes
     width: 100%;
 }
 
-#titulito h3 {
-}
+#titulito h3 {}
 
 #titulito {
     background-color: rgba(0, 0, 0, 0.457);
@@ -624,26 +678,27 @@ h3 {
 #message {
     /* border-radius: 10px; */
 }
+
 .boton {
-	background-color:transparent;
-	border-radius:28px;
-	border:1px solid #ffffff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	font-weight:bold;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
-}
-.boton:hover {
-	background-color:transparent;
-}
-.boton:active {
-	position:relative;
-	top:1px;
+    background-color: transparent;
+    border-radius: 28px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 16px 31px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
 }
 
-     
+.boton:hover {
+    background-color: transparent;
+}
+
+.boton:active {
+    position: relative;
+    top: 1px;
+}
