@@ -56,7 +56,6 @@ function obtenerImagenDelDia() {
     .catch(error => console.log(error));
 }
 const fechaInput = document.getElementById('fecha');
-const imagen = document.getElementById('imagen');
 const loader = document.getElementById('loader');
 
 fechaInput.onchange = function() {
@@ -81,13 +80,11 @@ fechaInput.addEventListener('change', () => {
     
 });
 
-
-
-  // Simula una carga de 3 segundos para el ejemplo
+  // carga para el ejemplo
   setTimeout(function() {
     // Oculta el spinner después de 3 segundos
     loader.style.display = 'none';
-  }, 2000);
+  }, 1000);
 };
 
 // funcion enviar mail
