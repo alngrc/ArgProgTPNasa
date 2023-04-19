@@ -74,15 +74,7 @@ function obtenerImagenDelDia() {
     })
     .catch(error => console.log(error));
 }
-window.addEventListener('load', function() {
-  const fechaInput = document.getElementById('fecha');
-  const fechaActual = new Date().toISOString().split("T")[0];
-  fechaInput.setAttribute("max", fechaActual);
-  fechaInput.value = fechaActual; // Agregar la fecha actual al input
-  
-  obtenerImagenDelDia(); // Obtener la imagen del día con la fecha actual
-  
-  fechaInput.addEventListener('change', () => {
+
 const fechaInput = document.getElementById('fecha');
 const loader = document.getElementById('loader');
 
@@ -110,7 +102,6 @@ fechaInput.onchange = function() {
 
     
   });
-}})
 
   // carga para el ejemplo
   setTimeout(function() {
@@ -145,7 +136,24 @@ window.addEventListener("load", function () {
 })
 
 
+var audio = new Audio('music/musica.mp3');
+let detector = 1;
+function asd() {
+  let btn = document.getElementById("playBtn");
+  if (detector === 1) {
+    audio.play();
+    btn.innerHTML = "<i class='material-icons'>pause_circle</i>";
+    detector = 0;
+  } else if ( detector === 0){
+    audio.pause();
+    btn.innerHTML = "<i class='material-icons'>play_circle</i>";
+    detector = 1;
+  }
+}
 
+function updateVolume() {
+  audio.volume = document.getElementById("volCtrl").value;
+}
 
 
 

@@ -30,6 +30,108 @@ body {
 }
 
 
+/* Estilo del botón */
+#playBtn {
+    background-color: rgba(0, 0, 0, 0);
+    /* Fondo verde */
+    border: none;
+    /* Sin borde */
+    color: rgb(255, 255, 255);
+    /* Texto blanco */
+  
+    padding: 1px 1px;
+    /* Padding */
+    text-align: center;
+    /* Texto centrado */
+    text-decoration: none;
+    /* Sin subrayado */
+    display: inline-block;
+    /* Elemento en línea */
+    font-size: 1px;
+    /* Tamaño de fuente */
+    margin: 0px 0px;
+    /* Margen */
+    cursor: url("imagenes/cursor-lain.cur");
+    /* Cursor de puntero */
+    position: relative;
+    
+  
+  }
+  
+  /* #playBtn:hover{
+    filter: brightness(190%);
+    box-shadow: 10px 6px 10px #ffffff;
+  
+    
+  
+  
+  } */
+  
+  #volCtrl {
+    filter: brightness(190%);
+    background-color: rgb(0, 0, 0);
+  
+    z-index: 5;
+    -webkit-appearance: none;
+    /* Sin apariencia predeterminada */
+    width: 10%;
+    /* Ancho completo */
+    height: 10px;
+    /* Altura de la barra */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    box-shadow: 0px 0px 0px black;
+  
+    /* Fondo gris */
+    outline: none;
+    /* Sin contorno */
+    opacity: 0.7;
+    /* Opacidad */
+    -webkit-transition: .3s;
+    /* Transición */
+    transition: opacity .3s;
+    /* Transición */
+  }
+  
+  #volCtrl:hover {
+    opacity: 1;
+    /* Opacidad completa al pasar el cursor */
+    box-shadow: rgb(253, 253, 253);
+  
+  }
+  
+  #volCtrl::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Sin apariencia predeterminada */
+    appearance: none;
+    width: 20px;
+    /* Ancho del control deslizante */
+    height: 20px;
+    /* Altura del control deslizante */
+    border-radius: 50%;
+    /* Bordes redondeados */
+    background-color: #ffffff;
+    /* Fondo verde */
+    box-shadow: 0px 0px 30px #ffffff;
+  
+    cursor: url("imagenes/cursor-lain.cur");
+    /* Cursor de puntero */
+  }
+  
+  #volCtrl::-moz-range-thumb {
+    width: 20px;
+    /* Ancho del control deslizante */
+    height: 20px;
+    /* Altura del control deslizante */
+    border-radius: 50%;
+    /* Bordes redondeados */
+    background-color: #4CAF50;
+    /* Fondo verde */
+    cursor: url("imagenes/cursor-lain.cur");
+    /* Cursor de puntero */
+  }
+  
+
 /* .titulo h1 {
     font-size: 60px;
     color: #ffffff;
@@ -674,9 +776,6 @@ h3 {
     width: 100%;
 }
 
-#message {
-    /* border-radius: 10px; */
-}
 
 .boton {
     background-color: transparent;
