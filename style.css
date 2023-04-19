@@ -476,6 +476,9 @@ input[type="date"]:hover::-webkit-calendar-picker-indicator {
     .nav-bar {
         display: none;
     }
+    .nos-texto span {
+        font-size: 32px;
+    }
 }
 
 
@@ -513,7 +516,6 @@ input[type="date"]:hover::-webkit-calendar-picker-indicator {
 #fond {
     background-color: rgba(30, 30, 30, 0.457);
     border: #262626 5px solid;
-    border-radius: 90px 90px 90px 90px;
     box-shadow: 1px 1px 10px white;
     margin-bottom: 40px;
 
