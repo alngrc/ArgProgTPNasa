@@ -148,15 +148,6 @@ window.addEventListener("load", function () {
 //             // do something with the list
 //         }
 //     });
-$(document).ready(function () {
-    $.ajax({
-        method: "GET",
-        url: "https://epic.gsfc.nasa.gov/api/natural",
-    }).done(function (respuestaImg) {
-
-    })
-})
-
 
 // funcion enviar mail
 // function sendMail() {
