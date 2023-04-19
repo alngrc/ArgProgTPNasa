@@ -28,9 +28,23 @@
 
 // }
 
+window.addEventListener('load', obtenerDatos);
+function obtenerDatos() {
+    const fecha = fechaInput.value;
+    const titulo = document.querySelector('#titulo-apod');
+    const copy = document.querySelector('#copy-apod')
+    const urlnew = `https://api.nasa.gov/planetary/apod?api_key=vZQVBQWVQr1EmRgO2Avwlnjrau0SaX9szdgjnI8T&date=${fechaActual}`;
+}
+
 const fechaInput = document.getElementById('fecha');
 const imagen = document.getElementById('imagen');
+const loader = document.getElementById('loader');
 
+fechaInput.onchange = function() {
+// Muestra el spinner cuando se cambia la fecha
+loader.style.display = 'block';
+
+//resto del codigo
 fechaInput.addEventListener('change', () => {
   const fecha = fechaInput.value;
   const titulo = document.querySelector('#titulo-apod');
@@ -44,8 +58,15 @@ fechaInput.addEventListener('change', () => {
       copy.innerHTML = data.copyright;
     })
     .catch(error => console.log(error));
-});
 
+    
+});
+  // Simula una carga de 3 segundos para el ejemplo
+  setTimeout(function() {
+    // Oculta el spinner después de 3 segundos
+    loader.style.display = 'none';
+  }, 2000);
+};
 
 // funcion enviar mail
 function sendMail() {
@@ -55,11 +76,27 @@ function sendMail() {
     window.location.href = link;
 }
 
+// maximo para el calendario
 
-
-const fechaInpu = document.getElementById("fecha");
 const fechaActual = new Date().toISOString().split("T")[0];
 fechaInput.setAttribute("max", fechaActual);
+
+
+// spinner
+
+window.addEventListener("load", function () {
+    var loader = document.querySelector("#loader");
+    var text = document.querySelector(".loader-text");
+  
+    // Ocultar el spinner después de 3 segundos
+    setTimeout(function () {
+      loader.style.display = "none";
+    }, 1000);
+})
+
+
+
+
 
 
 // // Configuración de la escena
@@ -123,15 +160,7 @@ fechaInput.setAttribute("max", fechaActual);
 
 
 
-window.addEventListener("load", function () {
-    var loader = document.querySelector("#loader");
-    var text = document.querySelector(".loader-text");
-  
-    // Ocultar el spinner después de 3 segundos
-    setTimeout(function () {
-      loader.style.display = "none";
-    }, 1000);
-})
+
 
 
 

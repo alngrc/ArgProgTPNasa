@@ -126,6 +126,7 @@ nav {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    
 }
 
 #loader::before {
@@ -135,15 +136,22 @@ nav {
     height: 60px;
     border-radius: 50%;
     border: 2px solid #ff0000;
-    box-shadow: 1px 1px 10px blueviolet;
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
     border-top-color: #007bff;
-    animation: spin 0.6s linear infinite;
+    animation: spin 0.5s linear infinite;
     overflow: hidden;
 
 }
 
 
-
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
 /* Barra de desplazamiento */
 ::-webkit-scrollbar {
@@ -385,11 +393,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: rgba(30, 30, 30, 0.457);
     border: #262626 5px solid;
     box-shadow:  1px 1px 10px white;
-    height: 300px;
+    height: 50%;
     width: 300px;
     align-content: center;
     justify-content: center;
-
+}
+#fon h1 {
+    display: flex;
+    justify-content: center;
+    
 }
 
 #fond{
@@ -426,8 +438,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    top: 0;
-    margin-top: 4em;
+    top: 10px;
     color: aliceblue;
 }
 
@@ -438,7 +449,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 #abt-text h2 {
     font-size: 1.5rem;
-    margin: 80px;
+    margin: 40px;
 }
 
 
