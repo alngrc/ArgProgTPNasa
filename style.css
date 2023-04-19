@@ -150,19 +150,6 @@ body {
     text-shadow: 1px 1px 10px aquamarine;
 }
 
-/* .titulo h1::after {
-    content: "";
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-    right: 0;
-    opacity: 0.4;
-    text-shadow: none;
-    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));
-    z-index: -1;
-} */
-
-
 
 
 /* nav bar*/
