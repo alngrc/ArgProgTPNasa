@@ -544,14 +544,15 @@ input[type="date"]:hover::-webkit-calendar-picker-indicator {
 
 .abt-int:hover .texto-superpuesto {
     display: block;
+
 }
 
 .texto-superpuesto {
+    display: flex;
     position: absolute;
     bottom: 0;
     transition: all e;
     top: 0;
-    left: 35px;
     width: 250px;
     height: 250px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -564,7 +565,7 @@ input[type="date"]:hover::-webkit-calendar-picker-indicator {
     text-align: center;
     transition: all ease-in-out .5s;
     animation: fade 1s 1;
-}
+  }
 
 @keyframes fade {
     from {
@@ -621,12 +622,11 @@ Escala Imagenes
 
 
 #titulo-contacto {
-    background-color: rgba(39, 39, 39, 0.336);
+    background-color: rgba(30, 30, 30, 0.457);
     border: #262626 5px solid;
-    border-top: #00000000;
     padding: 12px;
     
-    box-shadow: 1px 1px 10px #aaaaaa;
+    box-shadow: inset 1px 1px 10px #aaaaaa;
     /* border-radius: 60px; */
     margin: 0 auto;
     text-align: center;
@@ -642,7 +642,6 @@ Escala Imagenes
     width: 100%;
 }
 
-#titulito h3 {}
 
 #titulito {
     background-color: rgba(0, 0, 0, 0.457);

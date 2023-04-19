@@ -74,30 +74,43 @@ function obtenerImagenDelDia() {
     })
     .catch(error => console.log(error));
 }
+window.addEventListener('load', function() {
+  const fechaInput = document.getElementById('fecha');
+  const fechaActual = new Date().toISOString().split("T")[0];
+  fechaInput.setAttribute("max", fechaActual);
+  fechaInput.value = fechaActual; // Agregar la fecha actual al input
+  
+  obtenerImagenDelDia(); // Obtener la imagen del día con la fecha actual
+  
+  fechaInput.addEventListener('change', () => {
 const fechaInput = document.getElementById('fecha');
 const loader = document.getElementById('loader');
 
-fechaInput.onchange = function() {
-// Muestra el spinner cuando se cambia la fecha
-loader.style.display = 'block';
+// Establecer la fecha actual como valor por defecto del input
+const fechaActualISO = new Date().toISOString().split("T")[0];
+fechaInput.setAttribute("value", fechaActualISO);
 
-//resto del codigo
-fechaInput.addEventListener('change', () => {
-  const fecha = fechaInput.value;
-  const titulo = document.querySelector('#titulo-apod');
-  const copy = document.querySelector('#copy-apod')
-  const url = `https://api.nasa.gov/planetary/apod?api_key=vZQVBQWVQr1EmRgO2Avwlnjrau0SaX9szdgjnI8T&date=${fecha}`;
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      imagen.src = data.url;
-      titulo.innerHTML = data.title;
-      copy.innerHTML = data.copyright;
-    })
-    .catch(error => console.log(error));
+fechaInput.onchange = function() {
+  // Muestra el spinner cuando se cambia la fecha
+  loader.style.display = 'block';
+
+  fechaInput.addEventListener('change', () => {
+    const fecha = fechaInput.value;
+    const titulo = document.querySelector('#titulo-apod');
+    const copy = document.querySelector('#copy-apod')
+    const url = `https://api.nasa.gov/planetary/apod?api_key=vZQVBQWVQr1EmRgO2Avwlnjrau0SaX9szdgjnI8T&date=${fecha}`;
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        imagen.src = data.url;
+        titulo.innerHTML = data.title;
+        copy.innerHTML = data.copyright;
+      })
+      .catch(error => console.log(error));
 
     
-});
+  });
+}})
 
   // carga para el ejemplo
   setTimeout(function() {
@@ -105,7 +118,6 @@ fechaInput.addEventListener('change', () => {
     loader.style.display = 'none';
   }, 1000);
 };
-
 // funcion enviar mail
 function sendMail() {
     var link = 'mailto:alan.garciag10@outlook.com?subject=Message from '
